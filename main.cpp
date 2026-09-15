@@ -3,26 +3,28 @@
 using namespace std;
 
 void showMenu();
-void showStudentName(string name);
-void showStudentID (string id);
+void printStudentInfo (string name, string id);
+void showScore (string name, double score);
 
 int main(){
     showMenu();
     
-    string studentName;
+    string name;
     string id;
-
+    double score;
 
     cout << "Enter your name: ";
-    getline (cin, studentName);
+    getline (cin, name);
 
-    showStudentName(studentName);
-    
-    cout << "Enter your id: ";
+    cout << "Enter your ID: ";
     getline (cin, id);
 
-    showStudentID (id);
+    printStudentInfo(name, id);
     
+    cout << "Enter your score: ";
+    cin >> score; 
+
+    showScore (name, score);
     return 0;
 } 
 
@@ -33,13 +35,17 @@ void showMenu(){
     cout << "3. Exit" << endl;
 }
 
-void showStudentName(string name){
-    cout << "Hello " << name << "!" << endl;
-    cout << "Welcome to our class!" << endl;
-    cout << "=====================" << endl;
+void printStudentInfo (string name, string id){
+    cout << "======================" << endl;
+    cout << "Name: " << name << endl;
+    cout << "ID: " << id << endl;
+    cout << "======================" << endl;
 }
 
-void showStudentID (string id){
-    cout << "Student ID: " << id << endl;
-    cout << "============" << endl;
+void showScore (string name, double score){
+    cout << "**********************" << endl;
+    cout << "Student: " << name << endl;
+    cout << "Score  : " << score << endl;
+    cout << "Keep going!" << endl;
+    cout << "**********************" << endl;
 }
