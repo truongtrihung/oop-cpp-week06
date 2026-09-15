@@ -1,5 +1,30 @@
 #include <iostream>
+#include <string>
 using namespace std;
+
+void showMenu();
+void showStudentName(string name);
+void showStudentID (string id);
+
+int main(){
+    showMenu();
+    
+    string studentName;
+    string id;
+
+
+    cout << "Enter your name: ";
+    getline (cin, studentName);
+
+    showStudentName(studentName);
+    
+    cout << "Enter your id: ";
+    getline (cin, id);
+
+    showStudentID (id);
+    
+    return 0;
+} 
 
 void showMenu(){
     cout << "==== MENU ====" << endl;
@@ -8,9 +33,13 @@ void showMenu(){
     cout << "3. Exit" << endl;
 }
 
-int main(){
-    showMenu();
-    
-    
-    return 0;
-} 
+void showStudentName(string name){
+    cout << "Hello " << name << "!" << endl;
+    cout << "Welcome to our class!" << endl;
+    cout << "=====================" << endl;
+}
+
+void showStudentID (string id){
+    cout << "Student ID: " << id << endl;
+    cout << "============" << endl;
+}
