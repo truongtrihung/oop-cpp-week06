@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    cout << "Hello World" << endl;
-
-    return 0;
+void showMenu(){
+    cout << "==== MENU ====" << endl;
+    cout << "1. Display students" << endl;
+    cout << "2. Show statistics" << endl;
+    cout << "3. Exit" << endl;
 }
+
+int main(){
+    showMenu();
+    
+    
+    return 0;
+} 
